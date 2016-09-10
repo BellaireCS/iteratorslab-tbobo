@@ -16,18 +16,33 @@ public class IteratorRemover
 
 	public IteratorRemover(String line, String rem)
 	{
+		setTest(line, rem);
 	}
 
 	public void setTest(String line, String rem)
 	{
+		String[] words = line.split(" ");
+		list = new ArrayList<>(Arrays.asList(words));
+		toRemove = rem;
 	}
 
 	public void remove()
 	{
+		Iterator iter = list.iterator();
+		
+		while(iter.hasNext()) {
+			String current = iter.next();
+			
+			if (current.equals(rem)) {
+				iter.remove();
+			}
+		}
 	}
 
 	public String toString()
 	{
-		return "";
+		return list.toString().replaceAll();
 	}
+	
+
 }

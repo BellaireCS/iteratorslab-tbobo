@@ -13,6 +13,9 @@ public class IteratorReplacerRunner
 {
 	public static void main ( String[] args )
 	{
-		//add test cases		
+		//add test cases
+		IteratorRemover test = new IteratorRemover("a b c d e f g h i j x x x", "x", "#");
+		test.replace();
+		System.out.println(test)
 	}
 }
