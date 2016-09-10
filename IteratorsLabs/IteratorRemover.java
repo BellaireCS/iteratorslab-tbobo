@@ -41,7 +41,7 @@ public class IteratorRemover
 
 	public String toString()
 	{
-		return list.toString().replaceAll();
+		return list.toString();
 	}
 	
 
